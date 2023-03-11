@@ -3,28 +3,33 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+  body{
+    background-color: rgb(242, 235, 235);
+  }
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #750303e9;
+  height: 5vw;
 }
 
 .topnav a {
   float: left;
-  color: #f2f2f2;
+  color: #f2f2f2e9;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  margin-top: 0px;
 }
 
 .topnav a:hover {
   background-color: #ddd;
-  color: black;
+  color: rgb(252, 17, 17);
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #a93c3c;
   color: white;
 
 }
@@ -38,10 +43,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #333;
+  color: #2b2b2b;
 }
 .bs{
   color: #ddd;
+  background-color: black;
+  text-align: center;
+}
+.rec{
+  color: #ddd;
+  text-align: center;
   background-color: black;
 }
 {
@@ -56,7 +67,8 @@
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 0 -3px;}
+.row {margin: 10px 5px 5px 250px;
+}
 
 /* Clear floats after the columns */
 .row:after {
@@ -69,58 +81,430 @@
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
+    height: auto;
     display: block;
     margin-bottom: 20px;
+    padding: 100px;
   }
 }
 
 /* Style the counter cards */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
+  box-shadow: 0 4px 8px 0 rgba(93, 252, 41, 0.2);
+  padding: 30px;
   text-align: center;
-  background-color: #f1f1f1;
+  background-color:burlywood;
 }
-
+.cards a.ex{
+  background-color: #ddd;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+#testimonials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+}
+.testimonial-heading{
+    letter-spacing: 1px;
+    margin: 30px 0px;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.testimonial-heading h1{
+    font-size: 2.2rem;
+    font-weight: 500;
+    background-color: #202020;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+.testimonial-heading span{
+    font-size: 1.3rem;
+    color: #252525;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.testimonial-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width:100%;
+}
+.testimonial-box{
+    width:500px;
+    box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+}
+.profile-img{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+.profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile{
+    display: flex;
+    align-items: center;
+}
+.name-user{
+    display: flex;
+    flex-direction: column;
+}
+.name-user strong{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+.name-user span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+.reviews{
+    color: #f9d71c;
+}
+.box-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.client-comment p{
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}
+.testimonial-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+ 
+@media(max-width:1060px){
+    .testimonial-box{
+        width:45%;
+        padding: 10px;
+    }
+}
+@media(max-width:790px){
+    .testimonial-box{
+        width:100%;
+    }
+    .testimonial-heading h1{
+        font-size: 1.4rem;
+    }
+}
+@media(max-width:340px){
+    .box-top{
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    .reviews{
+        margin-top: 10px;
+    }
+}
+::selection{
+    color: #ffffff;
+    background-color: #252525;
+}
+#footer .twitter {
+  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+#footer .linkedin {
+  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
+  background-repeat: no-repeat;
+  background-position: -78px 0;
+}
+#footer .facebook {
+  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
+  background-repeat: no-repeat;
+  background-position: -233px 0;
+}
+#footer .skype {
+  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
+  background-repeat: no-repeat;
+  background-position: -156px 0;
+}
+#footer .flickr {
+  background-image: url(http://manstyle.coralixthemes.com/dark/img/dark/icons/footer-icons.png);
+  background-repeat: no-repeat;
+  background-position: -310px 0;
+}
+#footer a {
+  height: 56px;
+  width: 56px;
+  display: inline-block;
+  margin: 10px;
+}
+#footer a:hover {
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+}
+#footer .twitter:hover {
+  background-position: 0 -56px;
+}
+#footer .facebook:hover {
+  background-position: -233px -56px;
+}
+#footer .skype:hover {
+  background-position: -156px -56px;
+}
+#footer .linkedin:hover {
+  background-position: -78px -56px;
+}
+#footer .flickr:hover {
+  background-position: -310px -56px;
+}
+.bg-dark-1{
+  background-color: #090206;
+background-image: linear-gradient(225deg, #640c60 0%, #8f2374 50%, #812f72 100%);
+ 
+}
 </style>
 </head>
 <body>
 <div class="topnav">
   <a class="active" href="#home"><H1>HOME</H1></a>
   <a href="#news"><h1>BEST SELLING</h1></a>
-  <a href="#contact"><H1>RECOMMENDATION></H1></a>
-  <a href="#about"><H1>ABOUT</H1></a>
+  <a href="#contact"><H1>RECOMMENDATION</H1></a>
+  <a href="#about"><H1>REVIEWS</H1></a>
+  <div class="logo"></div><img src="https://img1.wsimg.com/isteam/ip/2ad2e274-a4f3-4a49-a754-b2cc3670307b/IBC%20Logo%20Dark%20Large.png/:/rs=h:151,cg:true,m/qt=q:95">
 </div>
 <div class="container">
-  <img src="https://ychef.files.bbci.co.uk/976x549/p07m8fp3.jpg" alt="Snow" style="width:90%;">
-  <div class="centered"><h1>INDIA'S MYTHOLOGICAL STORE</h1><br><h2>Indian Mythology: Tales, Symbols, and Rituals from the Heart of the Subcontinent An exploration of 99 classic myths of India from an entirely non-Western paradigm that provides a fresh understanding of the Hindu spiritual landscape. Compares and contrasts Indian mythology with the stories of the Bible, ancient Egypt, Greece, Scandinavia, and Mesopotamia. Looks at the evolution of Indian narratives and their interpretations over the millennia</h2></div>
+  <img src="https://ychef.files.bbci.co.uk/976x549/p07m8fp3.jpg" style="width:100%;">
+  <div class="centered"><h1>INDIA'S MYTHOLOGICAL STORE</h1><br><h2>Indian Mythology: Tales, Symbols, and Rituals from the Heart of the Subcontinent An exploration of 99 classic myths of India from an entirely non-Western paradigm that provides a fresh understanding of the Hindu spiritual landscape. </h2></div>
 </div>
   <div class="bs"><h1> BEST SELLING</h1></div>
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="https://miro.medium.com/max/648/1*6tRFV9ShjJnfJQrgi9UR7g.jpeg">
-      <p>Some text</p>
-      <p>Some text</p>
+      <img src="https://www.theuncorkedlibrarian.com/wp-content/uploads/2021/09/Asura-Tale-Of-The-Vanquished-by-Anand-Neelakantan.jpg.webp">
+      <H2>Asura</H2>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="https://booksom.com/wp-content/uploads/2018/09/ram-scion-of-ikshvaku-amish-tripathi.jpg">
-      <p>Some text</p>
-      <p>Some text</p>
+      <img src="https://i.pinimg.com/236x/27/2a/e6/272ae64fc17544497323a46d65815b78--hindu-mythology.jpg">
+      <H2>THE LEGEND PARSHU RAM</H2>
     </div>
   </div>
   
   <div class="column">
     <div class="card">
-      <img src="https://cdn.shortpixel.ai/spai/w_824+q_lossless+ret_img+to_webp/https://dreamsandmythology.com/wp-content/uploads/2020/02/Karnas-Wife.jpg">
-      <p>Some text</p>
-      <p>Some text</p>
+      <img src="https://www.theuncorkedlibrarian.com/wp-content/uploads/2021/09/The-Immortals-of-Meluha-by-Amish-Tripathi.jpg.webp">
+      <H2>AMISH</H2>
     </div>
-  </div>
+    </div>
+    </div>
+    <div class="rec"><h1>RECOMMENDATION</h1></div>
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <img src="https://i.pinimg.com/236x/d9/8f/20/d98f208caf2972d230405f80dae893ad--krishna-hindu.jpg">
+          <H2>PRADYUMNA </H2>
+        </div>
+      </div>
+    
+      <div class="column">
+        <div class="card">
+          <img src="https://i.pinimg.com/236x/06/fe/98/06fe98cf60034db81cf4932f2ff685d8--game-of-life-life-book.jpg">
+          <H2>RAMAYANA</H2>
+        </div>
+      </div>
+      
+      <div class="column">
+        <div class="card">
+          <img src="https://m.media-amazon.com/images/I/91+T1TAxkKL._AC_UL320_.jpg">
+          <H2>WAR OF LANKA</H2>
+        </div>
+        </div>
+
+
+
+    </div>
 </div>
+<title>India's Mythological Store</title>
+<!--Stylesheet--------------------------->
+<link rel="stylesheet" href="css/style.css"/>
+<!--Fav-icon------------------------------>
+<link rel="shortcut icon" href="images/fav-icon.png"/>
+<!--poppins-font-family------------------->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<!--using-Font-Awesome-------------------->
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <!--Testimonials------------------->
+    <section id="testimonials">
+        <!--heading--->
+        <div class="testimonial-heading">
+            <span>REVIEWS</span>
+            <h1>BUYERS REVIEWS</h1>
+        </div>
+        <!--testimonials-box-container------>
+        <div class="testimonial-box-container">
+            <!--BOX-1-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src=https://a.foxdcg.com/dpp-uploaded/images/credits/502556198884/alert_missing_persons_unit_ryan_broussard_square_2x.jpg?fit=inside%7C*:278 />
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>RAHUL</strong>
+                            <span>@rahulsingh</span>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i><!--Empty star-->
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>
+                      It is a very unconventional book. The writer has done a great job with the book. Its basically Ramayana from the prospective of Ravana.
+                    </p>
+                </div>
+            </div>
+            <!--BOX-2-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm387MzMIxMSLzu1BbQYfyyNPXE9CieaptSA&usqp=CAU/>
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>isshan</strong>
+                            <span>@isshanmehra</span>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i><!--Empty star-->
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>
+                      The plot of this book has its root in the book about Vishwamitra, however, don't worry if you haven't read it yet. The book is complete in itself and you can enjoy reading it without missing any important detail
+                    </p>
+                </div>
+            </div>
+            <!--BOX-3-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src=https://www.sentara.com/Assets/Img/Find-a-Doctor/EPD/persons-benjamin-127570.jpg?width=294/>
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>Rohan</strong>
+                            <span>@rohab sighai</span>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i><!--Empty star-->
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>
+                      History must be rewrite bcoz bharat varsh which includes Afghan, tibet, srilankha, half of the myanmar these are borders. Whatever he said in that book only pointing modern day bihar, uttarpradesh, bengal.
+                    </p>
+                </div>
+            </div>
+            <!--BOX-4-------------->
+            <div class="testimonial-box">
+                <!--top------------------------->
+                <div class="box-top">
+                    <!--profile----->
+                    <div class="profile">
+                        <!--img---->
+                        <div class="profile-img">
+                            <img src=https://obgyn.mcw.edu/wp-content/uploads/06242015obgyn-116-Person-Rachael-Web.jpg />
+                        </div>
+                        <!--name-and-username-->
+                        <div class="name-user">
+                            <strong>Ayushi</strong>
+                            <span>@ayushiverma</span>
+                        </div>
+                    </div>
+                    <!--reviews------>
+                    <div class="reviews">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i><!--Empty star-->
+                    </div>
+                </div>
+                <!--Comments---------------------------------------->
+                <div class="client-comment">
+                    <p>Ramayana is an incredibly moving and spiritual story of tragic love and epic adventure. Unfortunately I did find this retelling a bit of a slog to read, mainly because of the verbose, repetitive writing style and slow pacing</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="bg-dark-1">
+  <section id="footer" class="py-5">
+    <div class="container text-center">
+      <a href="#" class="twitter"></a>
+      <a href="#" class="linkedin"></a>
+      <a href="#" class="facebook"></a>
+      <a href="#" class="skype"></a>
+      <a href="#" class="flickr"></a>
+    </div>
+  </section>
+</footer>
 </body>
 
 
