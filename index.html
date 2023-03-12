@@ -43,7 +43,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #2b2b2b;
+  color: #0e0d0b;
 }
 .bs{
   color: #ddd;
@@ -67,7 +67,9 @@
 }
 
 /* Remove extra left and right margins, due to padding */
-.row {margin: 10px 5px 5px 250px;
+.row {
+  display: flex;
+  justify-content: center;
 }
 
 /* Clear floats after the columns */
@@ -93,7 +95,9 @@
   box-shadow: 0 4px 8px 0 rgba(93, 252, 41, 0.2);
   padding: 30px;
   text-align: center;
-  background-color:burlywood;
+  background-color:rgb(242, 243, 190);
+  height: 500px;
+  width: 100%;
 }
 .cards a.ex{
   background-color: #ddd;
@@ -282,6 +286,48 @@ a{
 background-image: linear-gradient(225deg, #640c60 0%, #8f2374 50%, #812f72 100%);
  
 }
+
+
+.flip-card {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #d6dd87;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #dee137;
+  color: rgb(13, 12, 12);
+  transform: rotateY(180deg);
+  font-style: italic;
+}
 </style>
 </head>
 <body>
@@ -293,59 +339,118 @@ background-image: linear-gradient(225deg, #640c60 0%, #8f2374 50%, #812f72 100%)
   <div class="logo"></div><img src="https://img1.wsimg.com/isteam/ip/2ad2e274-a4f3-4a49-a754-b2cc3670307b/IBC%20Logo%20Dark%20Large.png/:/rs=h:151,cg:true,m/qt=q:95">
 </div>
 <div class="container">
-  <img src="https://ychef.files.bbci.co.uk/976x549/p07m8fp3.jpg" style="width:100%;">
+  <img src="https://ychef.files.bbci.co.uk/976x549/p07m8fp3.jpg" style="width: 100%;">
   <div class="centered"><h1>INDIA'S MYTHOLOGICAL STORE</h1><br><h2>Indian Mythology: Tales, Symbols, and Rituals from the Heart of the Subcontinent An exploration of 99 classic myths of India from an entirely non-Western paradigm that provides a fresh understanding of the Hindu spiritual landscape. </h2></div>
 </div>
   <div class="bs"><h1> BEST SELLING</h1></div>
 <div class="row">
   <div class="column">
     <div class="card">
-      <img src="https://www.theuncorkedlibrarian.com/wp-content/uploads/2021/09/Asura-Tale-Of-The-Vanquished-by-Anand-Neelakantan.jpg.webp">
-      <H2>Asura</H2>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+      <img src="https://www.theuncorkedlibrarian.com/wp-content/uploads/2021/09/Asura-Tale-Of-The-Vanquished-by-Anand-Neelakantan.jpg.webp" style="width:300px;height:300px;">
+      <H1>ASURA</H1>
+      <h2>Rs 299</h2>
+    </div>
+    <div class="flip-card-back">
+      <h2>The book attempts to highlight the voice of the vanquished as opposed to the victor’s version of Ramayana that is commonly known  It explores the struggles of Ravana and his life that made him what he was</h2> 
+    </div>
+  </div>
+</div>
     </div>
   </div>
 
   <div class="column">
     <div class="card">
-      <img src="https://i.pinimg.com/236x/27/2a/e6/272ae64fc17544497323a46d65815b78--hindu-mythology.jpg">
-      <H2>THE LEGEND PARSHU RAM</H2>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img src="https://i.pinimg.com/236x/27/2a/e6/272ae64fc17544497323a46d65815b78--hindu-mythology.jpg" style="width:300px;height:300px;">
+             <h1>PARSHU RAM</h1>
+             <h2>Rs 399</h2>
+          </div>
+          <div class="flip-card-back">
+            <h2>The Mahabharata and the Puranas record that Parashurama was born to the Brahman sage Jamadagni and the princess Renuka, a member of the Kshatriya class. When Jamadagni suspected Renuka of an unchaste </h2>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   
   <div class="column">
     <div class="card">
-      <img src="https://www.theuncorkedlibrarian.com/wp-content/uploads/2021/09/The-Immortals-of-Meluha-by-Amish-Tripathi.jpg.webp">
-      <H2>AMISH</H2>
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+      <img src="https://www.theuncorkedlibrarian.com/wp-content/uploads/2021/09/The-Immortals-of-Meluha-by-Amish-Tripathi.jpg.webp" style="width:300px;height:300px;">
+      <H1>AMISH</H1>
+      <h2>Rs 499</h2>
+      </div>
+      <div class="flip-card-back">
+        <h2>The story is set in the land of Meluha and starts with the arrival of the Shiva. The Meluhans believe that Shiva is their fabled saviour Neelkanth. Shiva decides to help the Meluhans in their war against </h2> 
+      </div>
     </div>
+  </div>
+  
     </div>
-    </div>
+  </div>
+</div>
+</div>
     <div class="rec"><h1>RECOMMENDATION</h1></div>
     <div class="row">
       <div class="column">
         <div class="card">
-          <img src="https://i.pinimg.com/236x/d9/8f/20/d98f208caf2972d230405f80dae893ad--krishna-hindu.jpg">
-          <H2>PRADYUMNA </H2>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/71sHrl5R9SL.jpg" style="width:300px;height:300px;">
+                <H1>PRADYUMNA </H1>
+                <h2>Rs 499</h2>
+              </div>
+          <div class="flip-card-back">
+            <h2>Pradyumna was the son of Krishna and the sixty-first grandson of Adinarayana. His mother was Rukmini, whom Krishna had eloped with from Vidarbha during her swayamvara on her request. Pradyumna was born in Dvaraka.</h2> 
+          </div>
         </div>
+      </div>
+      </div>
       </div>
     
       <div class="column">
         <div class="card">
-          <img src="https://i.pinimg.com/236x/06/fe/98/06fe98cf60034db81cf4932f2ff685d8--game-of-life-life-book.jpg">
-          <H2>RAMAYANA</H2>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+           <img src="https://i.pinimg.com/236x/af/f7/67/aff767232415eb357369193a423afac7--audio-books-hindu.jpg"style="width:300px;height:300px;" >
+          <H1>HANUMAN THE INTRODUCTION</H1>
+          <h2>Rs 299</h2>
+              </div>
+          <div class="flip-card-back">
+            <h2> Hanuman is one of the central characters of the Hindu epic Ramayana. He is an ardent devotee of Rama and one of the Chiranjivis. Hanuman is regarded to be the son of the wind-god Vayu, who in several stories played a </h2> 
+          </div>
+        </div>
+      </div>
         </div>
       </div>
       
       <div class="column">
         <div class="card">
-          <img src="https://m.media-amazon.com/images/I/91+T1TAxkKL._AC_UL320_.jpg">
-          <H2>WAR OF LANKA</H2>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+          <img src="https://i.pinimg.com/236x/05/2d/74/052d7480dcf801ff6913fca49e0bfee7--english-book-the-reader.jpg" style="width:300px;height:300px;">
+          <H1>THE PREGNANT KING</H1>
+          <h2>Rs 399</h2>
+        </div> 
+          <div class="flip-card-back">
+            <h2>The Pregnant King is a 2008 book by Devdutt Pattanaik. It follows the story of Yuvanashva, a childless king, who accidentally drinks the magic potion meant to make his queens pregnant. It is set in the backdrop of the </h2> 
+          </div>
+        </div>
+      </div>
         </div>
         </div>
-
-
-
     </div>
-</div>
+
 <title>India's Mythological Store</title>
 <!--Stylesheet--------------------------->
 <link rel="stylesheet" href="css/style.css"/>
@@ -444,8 +549,7 @@ background-image: linear-gradient(225deg, #640c60 0%, #8f2374 50%, #812f72 100%)
                             <strong>Rohan</strong>
                             <span>@rohab sighai</span>
                         </div>
-                    </div>
-                    <!--reviews------>
+                      </div>
                     <div class="reviews">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
